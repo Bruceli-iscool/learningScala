@@ -5,3 +5,5 @@ val x = 9;
 println(x);
 val z: Int = 11;
 println(z);
+val g: String = "Hello";
+println(g);
