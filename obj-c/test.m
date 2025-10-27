@@ -50,10 +50,12 @@
 int main(void) {
     // autoreleasepool prevents a compiler warning
     @autoreleasepool {
+        NSNumber *magicNumber = [[NSNumber alloc] initWithInt:42];
+        NSLog(@"%@", magicNumber);
         NSString *test = @"Hello";
         // uppercaseString converts string to uppercase and [] calls class methods
         NSString *new = [test uppercaseString];
-        // @ represents NSString(s)
+        // @ represents NS types
         NSLog(@"%@", new);
         // lowercaseString converts NSString to lowercase
         NSLog(@"%@", [test lowercaseString]);
