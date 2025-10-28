@@ -8,5 +8,8 @@
 -(void) factory;    
 @end 
 int main(void) {
+    @autoreleasepool {
+        
+    }
     return 0;
 }
