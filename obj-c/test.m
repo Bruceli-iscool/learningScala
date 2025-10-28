@@ -16,6 +16,8 @@
 // syntax for functions (this example):
 -(void) print:(NSString*)str withAnotherNumber:(int)x;
 -(int) returnNumber;
+// create some initializers
+-(id) initWithAge:(NSNumber*)s;
 @end
 @implementation BLPerson
 -(void) printHello {
@@ -52,6 +54,11 @@ int main(void) {
     @autoreleasepool {
         NSNumber *magicNumber = [[NSNumber alloc] initWithInt:42];
         NSLog(@"%@", magicNumber);
+        // two ways to create an instance of a class
+        BLPerson *person = [BLPerson alloc];
+        BLPerson *p2 = [BLPerson new];
+        [p2 print:@"Hello"];
+        [person print:@"Hi"];
         NSString *test = @"Hello";
         // uppercaseString converts string to uppercase and [] calls class methods
         NSString *new = [test uppercaseString];
