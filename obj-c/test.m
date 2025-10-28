@@ -17,7 +17,9 @@
 -(void) print:(NSString*)str withAnotherNumber:(int)x;
 -(int) returnNumber;
 // create some initializers
--(id) initWithAge:(NSNumber*)s;
+-(id) initWithAge:(NSNumber*)a;
+// here is a factory method. note the use of +
++ (NSNumber*)blpersonWithAge:(NSNumber*)a;
 @end
 @implementation BLPerson
 -(void) printHello {
@@ -52,13 +54,17 @@
 int main(void) {
     // autoreleasepool prevents a compiler warning
     @autoreleasepool {
-        NSNumber *magicNumber = [[NSNumber alloc] initWithInt:42];
-        NSLog(@"%@", magicNumber);
+        // using a factory method to create an instance of a class
+        // this example uses a NSNumber factory method
+        NSNumber *magicNumber = [NSNumber numberWithInt:42];
+        NSNumber *magicNumber2 = [[NSNumber alloc] initWithInt:42];
+        NSLog(@"%@ is the same as %@", magicNumber, magicNumber2);
         // two ways to create an instance of a class
         BLPerson *person = [BLPerson alloc];
         BLPerson *p2 = [BLPerson new];
         [p2 print:@"Hello"];
         [person print:@"Hi"];
+        // example of literal syntax using @
         NSString *test = @"Hello";
         // uppercaseString converts string to uppercase and [] calls class methods
         NSString *new = [test uppercaseString];
