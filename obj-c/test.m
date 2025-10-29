@@ -13,8 +13,9 @@
 // - sign = instance method
 -(void) printHello;
 -(void) print:(NSString*)str;
-// syntax for functions (this example):
+// syntax for functions (this example has two arguments):
 -(void) print:(NSString*)str withAnotherNumber:(int)x;
+// no argument function
 -(int) returnNumber;
 // create some initializers
 -(id) initWithAge:(NSNumber*)a;
@@ -72,6 +73,22 @@ int main(void) {
         NSLog(@"%@", new);
         // lowercaseString converts NSString to lowercase
         NSLog(@"%@", [test lowercaseString]);
+        // determine object equality
+        // using == determines if the pointers point to the same object
+        if (person==p2) {
+            NSLog(@"cooler");
+        } else {
+            NSLog(@"cool");
+        }
+        if (magicNumber2==magicNumber) {
+            NSLog(@"even cooler");
+        }
+        // use ifEqual to see if two objects represent the same data
+        // note that ifEqual is called like a class function
+        if ([magicNumber isEqual:magicNumber2]) {
+            NSLog(@"coolest");
+        }
+        NSLog(@"%d", [p2 returnNumber]);
     }
     return 0;
 }
