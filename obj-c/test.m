@@ -20,7 +20,7 @@
 // create some initializers
 -(id) initWithAge:(NSNumber*)a;
 // here is a factory method. note the use of +
-+ (NSNumber*)blpersonWithAge:(NSNumber*)a;
++ (BLPerson*)blperson;
 @end
 @implementation BLPerson
 -(void) printHello {
@@ -37,6 +37,10 @@
 }
 -(int) returnNumber {
     return 5;
+}
+// implementation of a factory method. note the use of [[self alloc] init]
++(BLPerson *)blperson {
+    return [[self alloc] init];
 }
 @end
 @interface ScreamingPerson:BLPerson
@@ -89,6 +93,9 @@ int main(void) {
             NSLog(@"coolest");
         }
         NSLog(@"%d", [p2 returnNumber]);
+        // using factory method
+        BLPerson *z = [BLPerson blperson];
+        [z printHello];
     }
     return 0;
 }
