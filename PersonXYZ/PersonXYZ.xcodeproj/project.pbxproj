@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2652143C2ECFD7CE000E878A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2652143B2ECFD7CE000E878A /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		2652142A2ECED4B6000E878A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,11 +24,26 @@
 
 /* Begin PBXFileReference section */
 		2652142C2ECED4B6000E878A /* PersonXYZ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PersonXYZ; sourceTree = BUILT_PRODUCTS_DIR; };
+		2652143B2ECFD7CE000E878A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		261A18F52ECFD881001771CB /* Exceptions for "PersonXYZ" folder in "PersonXYZ" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PersonXYZ.m,
+				XYZScreamingPerson.m,
+			);
+			target = 2652142B2ECED4B6000E878A /* PersonXYZ */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2652142E2ECED4B6000E878A /* PersonXYZ */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				261A18F52ECFD881001771CB /* Exceptions for "PersonXYZ" folder in "PersonXYZ" target */,
+			);
 			path = PersonXYZ;
 			sourceTree = "<group>";
 		};
@@ -35,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2652143C2ECFD7CE000E878A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				2652142E2ECED4B6000E878A /* PersonXYZ */,
+				2652143A2ECFD7C6000E878A /* Frameworks */,
 				2652142D2ECED4B6000E878A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,14 @@
 				2652142C2ECED4B6000E878A /* PersonXYZ */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2652143A2ECFD7C6000E878A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2652143B2ECFD7CE000E878A /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
