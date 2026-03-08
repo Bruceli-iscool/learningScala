@@ -10,6 +10,11 @@ int main(int argc, const char * argv[]) {
         [person saySomething:@"My favorite color is blue."];
         [screamPerson saySomething:@"I like to scream!"];
         [person sayGoodbye];
+        [person setFirstName:@"Bill"];
+        NSString* firstName = person.getFirstName;
+        NSLog(firstName);
+        person.firstName = @"John";
+        NSLog([person getFirstName]);
     }
     return 0;
 }

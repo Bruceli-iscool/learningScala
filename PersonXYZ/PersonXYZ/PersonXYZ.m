@@ -3,7 +3,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PersonXYZ:NSObject
-@property NSString *firstName;
+@property (getter=getFirstName) NSString *firstName;
 @property NSString *lastName;
 @property NSDate *dateOfBirth;
 - (void) saySomething:(NSString *)input;
