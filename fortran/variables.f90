@@ -11,4 +11,6 @@ program variables
     frequency = (1.0, -0.5)
     message = 'Hello!'
     isTrue = .true.
+    print *, frequency
+    print *, 'Number = ' number
 end program variables
